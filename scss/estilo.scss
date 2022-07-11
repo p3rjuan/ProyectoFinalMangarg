@@ -52,6 +52,8 @@ $colorBody: #DFC7A3;
             background-color: green;
             color: black;
             font-size: large;
+            margin-left: 60px;
+            margin-top: 70px;
         }
     }
 
@@ -61,6 +63,10 @@ $colorBody: #DFC7A3;
         display: flex;
         align-items: center;
         grid-area: header;
+        .header--logo{
+            text-decoration: none;
+            margin-right: 20px;
+        }
 
         .header--inicio {
             font-family: Arial, Helvetica, sans-serif;
@@ -75,7 +81,7 @@ $colorBody: #DFC7A3;
             font-family: Arial, Helvetica, sans-serif;
             color: white;
             text-decoration: none;
-
+            margin-left: 15px;
             &:hover {
                 opacity: .5;
             }
@@ -93,7 +99,7 @@ $colorBody: #DFC7A3;
 
         main {
             width: 99%;
-            height: 2000px;
+            height: 1900px;
             grid-area: main;
 
 
@@ -112,33 +118,39 @@ $colorBody: #DFC7A3;
                     "senvio scompra sdescuento";
 
                 .titulo--envio {
+                    margin-left: 100px;
                     @extend .tituloD;
                     grid-area: tenvio;
                 }
 
                 .titulo--compra {
+                    margin-left: 50px;
                     @extend .tituloD;
                     grid-area: tcompra;
                 }
 
                 .titulo--descuento {
+                    margin-right: 100px;
                     @extend .tituloD;
                     grid-area: tdescuento;
                 }
 
                 .subtitulo--envio {
+                    margin-left: 100px;
                     @extend .subtituloDesktop;
                     grid-area: senvio;
                 }
 
-                .subtitulo--compra {
+                .subtitulo--descuento {
+                    margin-right: 100px;
                     @extend .subtituloDesktop;
                     grid-area: sdescuento;
                 }
 
-                .subtitulo--envio {
+                .subtitulo--compra {
+                    margin-left: 50px;
                     @extend .subtituloDesktop;
-                    grid-area: senvio;
+                    grid-area: scompra;
                 }
             }
 
@@ -151,7 +163,7 @@ $colorBody: #DFC7A3;
 
             .mangasD {
                 display: grid;
-                padding-left: 25%;
+                padding-left: 26.5%;
                 grid-template-columns: auto;
                 grid-row: repeat(6 1fr);
                 grid-template-areas:
@@ -167,7 +179,9 @@ $colorBody: #DFC7A3;
                         @extend .botonDesktop;
 
                         .card-body {
-                            margin-left: 60%;
+                            margin-left: 47%;
+                            height: 72px;
+                            width: 100px;
                         }
 
                         grid-area: cjujutsu;
@@ -179,7 +193,9 @@ $colorBody: #DFC7A3;
                         @extend .portadaDesktop;
 
                         .card-body {
-                            margin-left: 60%;
+                            margin-left: 47%;
+                            height: 72px;
+                            width: 100px;
                         }
 
                         @extend .botonDesktop;
@@ -192,7 +208,9 @@ $colorBody: #DFC7A3;
                         @extend .portadaDesktop;
 
                         .card-body {
-                            margin-left: 60%;
+                            margin-left: 47%;
+                            height: 72px;
+                            width: 100px;
                         }
 
                         @extend .botonDesktop;
@@ -205,7 +223,9 @@ $colorBody: #DFC7A3;
                         @extend .portadaDesktop;
 
                         .card-body {
-                            margin-left: 60%;
+                            margin-left: 47%;
+                            height: 72px;
+                            width: 100px;
                         }
 
                         @extend .botonDesktop;
@@ -226,7 +246,9 @@ $colorBody: #DFC7A3;
                         @extend .portadaDesktop;
 
                         .card-body {
-                            margin-left: 60%;
+                            margin-left: 47%;
+                            height: 72px;
+                            width: 100px;
                         }
 
                         @extend .botonDesktop;
@@ -239,7 +261,9 @@ $colorBody: #DFC7A3;
                         @extend .portadaDesktop;
 
                         .card-body {
-                            margin-left: 60%;
+                            margin-left: 47%;
+                            height: 72px;
+                            width: 100px;
                         }
 
                         @extend .botonDesktop;
@@ -250,8 +274,8 @@ $colorBody: #DFC7A3;
         }
 
         .main--sesion {
+            height: 550px;
             .contenedor--sesion {
-                border: solid;
                 margin-left: 40%;
                 margin-top: 10%;
                 width: 500px;
@@ -270,6 +294,9 @@ $colorBody: #DFC7A3;
                         "uno dos"
                         "tres tres"
                     ;
+                    .navbar-nav{
+                        padding-bottom: 10%;
+                    }
 
                     .uno {
                         grid-area: uno;
@@ -282,6 +309,18 @@ $colorBody: #DFC7A3;
 
                     .tres {
                         grid-area: tres;
+                        .mangasD{
+                            height: 600px;
+                           padding: 0%;
+                           margin-left: 15%;
+                            .mangas{
+                                margin-right: 300px;
+                                
+                                .btn{
+                                    margin-right: 199%;
+                                }
+                            }
+                        }
                         .prueba{
                             text-align: center;
                         }
@@ -306,40 +345,62 @@ $colorBody: #DFC7A3;
                         }
                         }
                     }
+                    .portada--compra{
+                        width: 612px;
+                        height: 950px;
+                    }
                 }
             }
         }
-    footer {
-        background-color: $colorHeader;
-
-        .contenedorFooter {
-            display: flex;
-            align-content: center;
-            width: 700px;
-            margin-left: 32%;
-            justify-content: space-between;
-
-            .fb {
-                &:hover {
-                    opacity: .5;
+        footer {
+            background-color: $colorHeader;
+    
+            .contenedorFooter {
+                display: flex;
+                align-content: center;
+                width: 700px;
+                margin-left: 31%;
+                justify-content: space-between;
+    
+                .fb {
+                    width: 60px;
+                    height: 60px ;
+                    .red--social{
+                        text-decoration: none;
+                        color: black;
+                    }
+                    &:hover {
+                        opacity: .5;
+                    }
                 }
-            }
-
-            .ig {
-                &:hover {
-                    opacity: .5;
+    
+                .ig {
+                    width: 60px;
+                    height: 60px ;
+                    .red--social{
+                        text-decoration: none;
+                        color: black;
+                    }
+                    &:hover {
+                        opacity: .5;
+                    }
                 }
-            }
-
-            .tw {
-                &:hover {
-                    opacity: .5;
+    
+                .tw {
+                    .red--social{
+                        text-decoration: none;
+                        color: black;
+                    }
+                    width: 60px;
+                    height: 60px ;
+                    &:hover {
+                        opacity: .5;
+                    }
                 }
             }
         }
+
     }
-
-
 
 @media screen and (max-width:320px) {
     .titulo {
@@ -453,6 +514,7 @@ $colorBody: #DFC7A3;
                 }
 
                 .titulo--descuento {
+                    height: 25px;
                     @extend .titulo;
                     grid-area: tdescuento;
                 }
@@ -482,8 +544,12 @@ $colorBody: #DFC7A3;
 
             .mangas {
                 display: flex;
+                margin-bottom: 10px;
 
                 .card--jujutsu {
+                     .card-body {
+                            height: 100px;
+                        }
                     @extend .cards;
 
                     .portada {
@@ -496,6 +562,9 @@ $colorBody: #DFC7A3;
                 }
 
                 .card--promised {
+                     .card-body {
+                            height: 100px;
+                        }
                     @extend .cards;
 
                     .portada {
@@ -508,6 +577,9 @@ $colorBody: #DFC7A3;
                 }
 
                 .card--haikyu {
+                     .card-body {
+                        height: 100px;
+                        }
                     @extend .cards;
 
                     .portada {
@@ -520,6 +592,9 @@ $colorBody: #DFC7A3;
                 }
 
                 .card--tokyog {
+                     .card-body {
+                        height: 100px;
+                        }
                     @extend .cards;
 
                     .portada {
@@ -532,6 +607,9 @@ $colorBody: #DFC7A3;
                 }
 
                 .card--tokyo {
+                     .card-body {
+                        height: 100px;
+                        }
                     @extend .cards;
 
                     .portada {
@@ -544,6 +622,9 @@ $colorBody: #DFC7A3;
                 }
 
                 .card--slam {
+                     .card-body {
+                        height: 100px;
+                        }
                     @extend .cards;
                 }
 
@@ -555,8 +636,11 @@ $colorBody: #DFC7A3;
                     @extend .boton;
                 }
             }
-
-            .main--sesion {
+        }
+    }
+    .body--sesion{
+        width: 320px;
+        .main--sesion {
             width: 318px;
             height: 400px;
             .contenedor--sesion{
@@ -565,16 +649,113 @@ $colorBody: #DFC7A3;
                 margin-left: 2px;
                 margin-top: 10px;
                 .btn{
-                    margin-left: 3%;
+                    margin-left: 30%;
+                }
+            }
+        }
+       }
+    .body--compra{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        .main--compra{
+            width: 320px;
+            height: 2900px;
+            .contenedor--compra{
+                width: 320px;
+                .uno{
+                    width: 320px;
+                }
+                .dos{
+                    width: 320px;
+                    margin-left: 10px;
+                    .nombre--manga{
+                        margin-left: 18%;
+                    }
+                    .nombre--manga1{
+                        margin-left: 27%;
+                    }
+                    .nombre--manga2{
+                        margin-left: 13%;
+                    }
+                    .nombre--manga3{
+                        margin-left: 10%;
+                    }
+                    .nombre--manga4{
+                        margin-left: 22%;
+                    }
+                    .precio{
+                        margin-left: 40%;
+                    }
+                    .acomodar{
+                        width: 290px;
+                    }
+                }
+                .tres{
+                    width: 320px;
+                    .prueba{
+                        text-align: center;
+                    }
+                    .mangasD{
+                        height: 1126px;
+                        .mangas{
+                            margin-left: 70px;
+                        }
+                    }
+                }
+                .jujutsu--compra{
+                    width: 300px;
+                    height: 350px;
+                    margin-left: 10px;
+                }
+                .portada--compra{
+                    width: 300px;
+                    height: 350px;
+                    margin-left: 10px;
+                }
+               
+            }
+            
+        }
+    }
+    footer {
+        background-color: $colorHeader;
+
+        .contenedorFooter {
+            display: flex;
+            align-content: center;
+            width: 319px;
+            justify-content: space-between;
+
+            .fb {
+                width: 50px;
+                height: 50px ;
+                margin-left: 10px;
+                .red--social{
+                    text-decoration: none;
+                    color: black;
+                }
+
+            }
+
+            .ig {
+                width: 50px;
+                height: 50px ;
+                .red--social{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+
+            .tw {
+                width: 50px;
+                height: 50px ;
+                margin-right: 10px;
+                .red--social{
+                    text-decoration: none;
+                    color: black;
                 }
             }
         }
     }
-        .main--compra{
-            .contenedor--compra{
-                width: 2000px;
-            }
-        }
-    }
-
 }

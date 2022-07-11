@@ -1,10 +1,25 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Heycomic';
+  src: url(../Fuentes/Hey\ Comic.ttf);
+}
+
+@font-face {
+  font-family: 'IBMPlexSerif';
+  src: url(../Fuentes/IBMPlexSerif-Bold.ttf);
+}
 
 @media screen and (min-width: 321px) {
-  .tituloD, body main .ofertasInfo .titulo--envio, body main .ofertasInfo .titulo--compra, body main .ofertasInfo .titulo--descuento {
+
+  .tituloD,
+  body main .ofertasInfo .titulo--envio,
+  body main .ofertasInfo .titulo--compra,
+  body main .ofertasInfo .titulo--descuento {
     text-decoration: underline;
     margin-left: 1%;
     text-align: center;
@@ -12,171 +27,379 @@
     height: 50px;
     color: black;
     font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex; }
-  .subtituloDesktop, body main .ofertasInfo .subtitulo--envio, body main .ofertasInfo .subtitulo--compra {
+    font-family: 'IBMPlexSerif';
+    display: flex;
+  }
+
+  .subtituloDesktop,
+  body main .ofertasInfo .subtitulo--envio,
+  body main .ofertasInfo .subtitulo--descuento,
+  body main .ofertasInfo .subtitulo--compra {
     margin-left: 1%;
     text-align: center;
     width: 200px;
     height: 50px;
     opacity: 60%;
     font-size: large;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex; }
-  .cardDesktop, body main .mangasD .mangas .card--jujutsu, body main .mangasD .mangas .card--promised, body main .mangasD .mangas .card--haikyu, body main .mangasD .mangas .card--tokyog, body main .mangasD .mangas .card--tokyo, body main .mangasD .mangas .card--slam {
+    font-family: 'IBMPlexSerif';
+    display: flex;
+  }
+
+  .cardDesktop,
+  body main .mangasD .mangas .card--jujutsu,
+  body main .mangasD .mangas .card--promised,
+  body main .mangasD .mangas .card--haikyu,
+  body main .mangasD .mangas .card--tokyog,
+  body main .mangasD .mangas .card--tokyo,
+  body main .mangasD .mangas .card--slam {
     margin-top: 50px;
     margin-left: 25px;
-    text-align: center; }
-  .portadaDesktop .portada, body main .mangasD .mangas .card--jujutsu .portada, body main .mangasD .mangas .card--promised .portada, body main .mangasD .mangas .card--haikyu .portada, body main .mangasD .mangas .card--tokyog .portada, body main .mangasD .mangas .card--tokyo .portada, body main .mangasD .mangas .card--slam .portada {
+    text-align: center;
+  }
+
+  .portadaDesktop .portada,
+  body main .mangasD .mangas .card--jujutsu .portada,
+  body main .mangasD .mangas .card--promised .portada,
+  body main .mangasD .mangas .card--haikyu .portada,
+  body main .mangasD .mangas .card--tokyog .portada,
+  body main .mangasD .mangas .card--tokyo .portada,
+  body main .mangasD .mangas .card--slam .portada {
     height: 280px;
     width: 228px;
     object-fit: cover;
-    border: solid; }
-  .botonDesktop .btn, body main .mangasD .mangas .card--jujutsu .btn, body main .mangasD .mangas .card--promised .btn, body main .mangasD .mangas .card--haikyu .btn, body main .mangasD .mangas .card--tokyog .btn, body main .mangasD .mangas .card--tokyo .btn, body main .mangasD .mangas .card--slam .btn {
+    border: solid;
+  }
+
+  .botonDesktop .btn,
+  body main .mangasD .mangas .card--jujutsu .btn,
+  body main .mangasD .mangas .card--promised .btn,
+  body main .mangasD .mangas .card--haikyu .btn,
+  body main .mangasD .mangas .card--tokyog .btn,
+  body main .mangasD .mangas .card--tokyo .btn,
+  body main .mangasD .mangas .card--slam .btn {
     background-color: green;
     color: black;
-    font-size: large; }
+    font-size: large;
+    margin-left: 60px;
+    margin-top: 70px;
+  }
+
   header {
     background-color: #D37A47;
     height: 150px;
     display: flex;
     align-items: center;
-    grid-area: header; }
-    header .header--inicio {
-      font-family: Arial, Helvetica, sans-serif;
-      color: white;
-      text-decoration: none; }
-      header .header--inicio:hover {
-        opacity: .5; }
-    header .header--carrito {
-      font-family: Arial, Helvetica, sans-serif;
-      color: white;
-      text-decoration: none; }
-      header .header--carrito:hover {
-        opacity: .5; }
+    grid-area: header;
+  }
+
+  header .header--logo {
+    text-decoration: none;
+    margin-right: 20px;
+  }
+
+  header .header--inicio {
+    font-family: 'IBMPlexSerif';
+    color: white;
+    text-decoration: none;
+  }
+
+  header .header--inicio:hover {
+    opacity: .5;
+  }
+
+  header .header--carrito {
+    font-family: 'IBMPlexSerif';
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+
+  header .header--carrito:hover {
+    opacity: .5;
+  }
+
   nav {
     background-color: #C26F41;
     height: 60px;
-    grid-area: nav; }
-  body {
-    background-color: #DFC7A3; }
-    body main {
-      width: 99%;
-      height: 2000px;
-      grid-area: main; }
-      body main .carrousel1 {
-        width: 1000px;
-        border: solid;
-        margin-left: 25%; }
-      body main .ofertasInfo {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: "tenvio tcompra tdescuento"
- "senvio scompra sdescuento"; }
-        body main .ofertasInfo .titulo--envio {
-          grid-area: tenvio; }
-        body main .ofertasInfo .titulo--compra {
-          grid-area: tcompra; }
-        body main .ofertasInfo .titulo--descuento {
-          grid-area: tdescuento; }
-        body main .ofertasInfo .subtitulo--envio {
-          grid-area: senvio; }
-        body main .ofertasInfo .subtitulo--compra {
-          grid-area: sdescuento; }
-        body main .ofertasInfo .subtitulo--envio {
-          grid-area: senvio; }
-      body main .novedades {
-        padding-top: 3%;
-        text-align: center;
-        text-decoration: overline;
-        font-family: Arial, Helvetica, sans-serif; }
-      body main .mangasD {
-        display: grid;
-        padding-left: 25%;
-        grid-template-columns: auto;
-        grid-row: repeat(6 1fr);
-        grid-template-areas: "cjujutsu cpromised chaikyu ctokyog ctokyo cslam "; }
-        body main .mangasD .mangas {
-          flex-direction: row; }
-          body main .mangasD .mangas .card--jujutsu {
-            grid-area: cjujutsu; }
-            body main .mangasD .mangas .card--jujutsu .card-body {
-              margin-left: 60%; }
-          body main .mangasD .mangas .card--promised {
-            grid-area: cpromised; }
-            body main .mangasD .mangas .card--promised .card-body {
-              margin-left: 60%; }
-          body main .mangasD .mangas .card--haikyu {
-            grid-area: chaikyu; }
-            body main .mangasD .mangas .card--haikyu .card-body {
-              margin-left: 60%; }
-          body main .mangasD .mangas .card--tokyog {
-            grid-area: ctokyog; }
-            body main .mangasD .mangas .card--tokyog .card-body {
-              margin-left: 60%; }
-          body main .mangasD .mangas .card--tokyo {
-            grid-area: ctokyog; }
-          body main .mangasD .mangas .card--tokyo {
-            grid-area: ctokyo; }
-            body main .mangasD .mangas .card--tokyo .card-body {
-              margin-left: 60%; }
-          body main .mangasD .mangas .card--slam {
-            grid-area: cslam; }
-            body main .mangasD .mangas .card--slam .card-body {
-              margin-left: 60%; }
-    body .main--sesion .contenedor--sesion {
-      border: solid;
-      margin-left: 40%;
-      margin-top: 10%;
-      width: 500px;
-      height: 300px; }
-    body .main--compra .contenedor--compra {
-      margin: auto;
-      width: 90%;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      grid-template-rows: 3fr auto;
-      grid-template-areas: "uno dos"
- "tres tres"; }
-      body .main--compra .contenedor--compra .uno {
-        grid-area: uno;
-        margin-left: 200px; }
-      body .main--compra .contenedor--compra .dos {
-        grid-area: dos; }
-      body .main--compra .contenedor--compra .tres {
-        grid-area: tres; }
-        body .main--compra .contenedor--compra .tres .prueba {
-          text-align: center; }
-      body .main--compra .contenedor--compra .aside .temporal {
-        color: #a8a7a7; }
-      body .main--compra .contenedor--compra .aside .detalles--de--compra .boton--carrito .buton {
-        background-color: #cfa24f;
-        border-radius: 10%;
-        text-align: center;
-        text-decoration: none;
-        text-decoration: underline;
-        color: black; }
-        body .main--compra .contenedor--compra .aside .detalles--de--compra .boton--carrito .buton:hover {
-          opacity: .5; } }
+    grid-area: nav;
+  }
 
-footer {
-  background-color: #D37A47; }
+  body {
+    background-color: #DFC7A3;
+  }
+
+  body main {
+    width: 99%;
+    height: 1900px;
+    grid-area: main;
+  }
+
+  body main .carrousel1 {
+    width: 1000px;
+    border: solid;
+    margin-left: 25%;
+  }
+
+  body main .ofertasInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "tenvio tcompra tdescuento"
+      "senvio scompra sdescuento";
+  }
+
+  body main .ofertasInfo .titulo--envio {
+    margin-left: 100px;
+    grid-area: tenvio;
+  }
+
+  body main .ofertasInfo .titulo--compra {
+    margin-left: 50px;
+    grid-area: tcompra;
+  }
+
+  body main .ofertasInfo .titulo--descuento {
+    margin-right: 100px;
+    grid-area: tdescuento;
+  }
+
+  body main .ofertasInfo .subtitulo--envio {
+    margin-left: 100px;
+    grid-area: senvio;
+  }
+
+  body main .ofertasInfo .subtitulo--descuento {
+    margin-right: 100px;
+    grid-area: sdescuento;
+  }
+
+  body main .ofertasInfo .subtitulo--compra {
+    margin-left: 50px;
+    grid-area: scompra;
+  }
+
+  body main .novedades {
+    padding-top: 3%;
+    text-align: center;
+    text-decoration: overline;
+    font-family: 'Heycomic';
+  }
+
+  body main .mangasD {
+    display: grid;
+    padding-left: 26.5%;
+    grid-template-columns: auto;
+    grid-row: repeat(6 1fr);
+    grid-template-areas: "cjujutsu cpromised chaikyu ctokyog ctokyo cslam ";
+  }
+
+  body main .mangasD .mangas {
+    flex-direction: row;
+  }
+
+  body main .mangasD .mangas .card--jujutsu {
+    grid-area: cjujutsu;
+  }
+
+  body main .mangasD .mangas .card--jujutsu .card-body {
+    margin-left: 47%;
+    height: 72px;
+    width: 100px;
+  }
+
+  body main .mangasD .mangas .card--promised {
+    grid-area: cpromised;
+  }
+
+  body main .mangasD .mangas .card--promised .card-body {
+    margin-left: 47%;
+    height: 72px;
+    width: 100px;
+  }
+
+  body main .mangasD .mangas .card--haikyu {
+    grid-area: chaikyu;
+  }
+
+  body main .mangasD .mangas .card--haikyu .card-body {
+    margin-left: 47%;
+    height: 72px;
+    width: 100px;
+  }
+
+  body main .mangasD .mangas .card--tokyog {
+    grid-area: ctokyog;
+  }
+
+  body main .mangasD .mangas .card--tokyog .card-body {
+    margin-left: 47%;
+    height: 72px;
+    width: 100px;
+  }
+
+  body main .mangasD .mangas .card--tokyo {
+    grid-area: ctokyog;
+  }
+
+  body main .mangasD .mangas .card--tokyo {
+    grid-area: ctokyo;
+  }
+
+  body main .mangasD .mangas .card--tokyo .card-body {
+    margin-left: 47%;
+    height: 72px;
+    width: 100px;
+  }
+
+  body main .mangasD .mangas .card--slam {
+    grid-area: cslam;
+  }
+
+  body main .mangasD .mangas .card--slam .card-body {
+    margin-left: 47%;
+    height: 72px;
+    width: 100px;
+  }
+
+  body .main--sesion {
+    height: 550px;
+  }
+
+  body .main--sesion .contenedor--sesion {
+    margin-left: 40%;
+    margin-top: 10%;
+    width: 500px;
+    height: 300px;
+  }
+
+  body .main--compra .contenedor--compra {
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr auto;
+    grid-template-areas: "uno dos"
+      "tres tres";
+  }
+
+  body .main--compra .contenedor--compra .navbar-nav {
+    padding-bottom: 10%;
+  }
+
+  body .main--compra .contenedor--compra .uno {
+    grid-area: uno;
+    margin-left: 200px;
+  }
+
+  body .main--compra .contenedor--compra .dos {
+    grid-area: dos;
+  }
+
+  body .main--compra .contenedor--compra .tres {
+    grid-area: tres;
+  }
+
+  body .main--compra .contenedor--compra .tres .mangasD {
+    height: 600px;
+    padding: 0%;
+    margin-left: 15%;
+  }
+
+  body .main--compra .contenedor--compra .tres .mangasD .mangas {
+    margin-right: 300px;
+  }
+
+  body .main--compra .contenedor--compra .tres .mangasD .mangas .btn {
+    margin-right: 199%;
+  }
+
+  body .main--compra .contenedor--compra .tres .prueba {
+    text-align: center;
+  }
+
+  body .main--compra .contenedor--compra .aside .temporal {
+    color: #a8a7a7;
+  }
+
+  body .main--compra .contenedor--compra .aside .detalles--de--compra .boton--carrito .buton {
+    background-color: #cfa24f;
+    border-radius: 10%;
+    text-align: center;
+    text-decoration: none;
+    text-decoration: underline;
+    color: black;
+  }
+
+  body .main--compra .contenedor--compra .aside .detalles--de--compra .boton--carrito .buton:hover {
+    opacity: .5;
+  }
+
+  body .main--compra .contenedor--compra .portada--compra {
+    width: 612px;
+    height: 950px;
+  }
+
+  footer {
+    background-color: #D37A47;
+  }
+
   footer .contenedorFooter {
     display: flex;
     align-content: center;
     width: 700px;
-    margin-left: 32%;
-    justify-content: space-between; }
-    footer .contenedorFooter .fb:hover {
-      opacity: .5; }
-    footer .contenedorFooter .ig:hover {
-      opacity: .5; }
-    footer .contenedorFooter .tw:hover {
-      opacity: .5; }
+    margin-left: 31%;
+    justify-content: space-between;
+  }
+
+  footer .contenedorFooter .fb {
+    width: 60px;
+    height: 60px;
+  }
+
+  footer .contenedorFooter .fb .red--social {
+    text-decoration: none;
+    color: black;
+  }
+
+  footer .contenedorFooter .fb:hover {
+    opacity: .5;
+  }
+
+  footer .contenedorFooter .ig {
+    width: 60px;
+    height: 60px;
+  }
+
+  footer .contenedorFooter .ig .red--social {
+    text-decoration: none;
+    color: black;
+  }
+
+  footer .contenedorFooter .ig:hover {
+    opacity: .5;
+  }
+
+  footer .contenedorFooter .tw {
+    width: 60px;
+    height: 60px;
+  }
+
+  footer .contenedorFooter .tw .red--social {
+    text-decoration: none;
+    color: black;
+  }
+
+  footer .contenedorFooter .tw:hover {
+    opacity: .5;
+  }
+}
 
 @media screen and (max-width: 320px) {
-  .titulo, body main .ofertasInfo .titulo--envio, body main .ofertasInfo .titulo--compra, body main .ofertasInfo .titulo--descuento {
+
+  .titulo,
+  body main .ofertasInfo .titulo--envio,
+  body main .ofertasInfo .titulo--compra,
+  body main .ofertasInfo .titulo--descuento {
     text-decoration: underline;
     margin-left: 20%;
     text-align: center;
@@ -184,95 +407,321 @@ footer {
     height: 50px;
     color: black;
     font-size: large;
-    font-family: Arial, Helvetica, sans-serif; }
-  .subtitulo, body main .ofertasInfo .subtitulo--envio, body main .ofertasInfo .subtitulo--compra, body main .ofertasInfo .subtitulo--descuento {
+    font-family: 'IBMPlexSerif';
+  }
+
+  .subtitulo,
+  body main .ofertasInfo .subtitulo--envio,
+  body main .ofertasInfo .subtitulo--compra,
+  body main .ofertasInfo .subtitulo--descuento {
     margin-left: 20%;
     text-align: center;
     width: 200px;
     height: 50px;
     opacity: 60%;
     font-size: large;
-    font-family: Arial, Helvetica, sans-serif; }
-  .cards, body main .mangas .card--jujutsu, body main .mangas .card--promised, body main .mangas .card--haikyu, body main .mangas .card--tokyog, body main .mangas .card--tokyo, body main .mangas .card--slam {
+    font-family: 'IBMPlexSerif';
+  }
+
+  .cards,
+  body main .mangas .card--jujutsu,
+  body main .mangas .card--promised,
+  body main .mangas .card--haikyu,
+  body main .mangas .card--tokyog,
+  body main .mangas .card--tokyo,
+  body main .mangas .card--slam {
     margin-top: 50px;
     margin-left: 25px;
-    text-align: center; }
-  .port .portada, body main .mangas .portada .portada {
+    text-align: center;
+  }
+
+  .port,
+  body main .mangas .card--jujutsu .portada,
+  body main .mangas .card--promised .portada,
+  body main .mangas .card--haikyu .portada,
+  body main .mangas .card--tokyog .portada,
+  body main .mangas .card--tokyo .portada,
+  body main .mangas .portada {
     height: 180px;
     width: 128px;
-    object-fit: cover; }
-  .boton, body main .mangas .card--jujutsu .btn, body main .mangas .card--promised .btn, body main .mangas .card--haikyu .btn, body main .mangas .card--tokyog .btn, body main .mangas .card--tokyo .btn, body main .mangas .btn {
+    object-fit: cover;
+  }
+
+  .boton,
+  body main .mangas .card--jujutsu .btn,
+  body main .mangas .card--promised .btn,
+  body main .mangas .card--haikyu .btn,
+  body main .mangas .card--tokyog .btn,
+  body main .mangas .card--tokyo .btn,
+  body main .mangas .btn {
     background-color: green;
     color: black;
-    font-size: large; }
+    font-size: large;
+  }
+
   header {
     background-color: #D37A47;
     width: 320px;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'IBMPlexSerif';
     display: flex;
     flex-direction: column;
     color: white;
-    grid-area: header; }
-    header .contenedor {
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      flex-direction: column; }
-      header .contenedor .header--logo {
-        width: min-content;
-        height: min-content; }
-      header .contenedor .header--inicio {
-        height: min-content;
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        color: white; }
-      header .contenedor .header--carrito {
-        height: min-content;
-        padding: 0;
-        margin: 0;
-        text-decoration: none;
-        color: white; }
+    grid-area: header;
+  }
+
+  header .contenedor {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .contenedor .header--logo {
+    width: min-content;
+    height: min-content;
+  }
+
+  header .contenedor .header--inicio {
+    height: min-content;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+  }
+
+  header .contenedor .header--carrito {
+    height: min-content;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+  }
+
   .navbar {
     background-color: #C26F41;
     width: 320px;
-    grid-area: nav; }
+    grid-area: nav;
+  }
+
   body {
     width: 320px;
-    background-color: #DFC7A3; }
-    body main {
-      background-color: #DFC7A3;
-      grid-area: main;
-      width: 320px; }
-      body main .ofertasInfo {
-        display: flex;
-        flex-direction: column;
-        margin: 1px; }
-        body main .ofertasInfo .titulo--envio {
-          grid-area: tenvio; }
-        body main .ofertasInfo .titulo--compra {
-          grid-area: tcompra; }
-        body main .ofertasInfo .titulo--descuento {
-          grid-area: tdescuento; }
-        body main .ofertasInfo .subtitulo--envio {
-          grid-area: senvio; }
-        body main .ofertasInfo .subtitulo--compra {
-          grid-area: scompra; }
-        body main .ofertasInfo .subtitulo--descuento {
-          grid-area: sdescuento; }
-      body main .novedades {
-        text-align: center;
-        margin-top: 30px;
-        text-decoration: overline;
-        font-family: Arial, Helvetica, sans-serif; }
-      body main .mangas {
-        display: flex; }
-      body main .main--sesion {
-        height: 500px; }
-      body main .contenedor--sesion {
-        margin-top: 50px; }
-  .body--venta {
-    width: 320px; }
-    .body--venta .main--compra .contenedor--compra {
-      width: 2000px; } }
+    background-color: #DFC7A3;
+  }
+
+  body main {
+    background-color: #DFC7A3;
+    grid-area: main;
+    width: 320px;
+  }
+
+  body main .ofertasInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 1px;
+  }
+
+  body main .ofertasInfo .titulo--envio {
+    grid-area: tenvio;
+  }
+
+  body main .ofertasInfo .titulo--compra {
+    grid-area: tcompra;
+  }
+
+  body main .ofertasInfo .titulo--descuento {
+    height: 25px;
+    grid-area: tdescuento;
+  }
+
+  body main .ofertasInfo .subtitulo--envio {
+    grid-area: senvio;
+  }
+
+  body main .ofertasInfo .subtitulo--compra {
+    grid-area: scompra;
+  }
+
+  body main .ofertasInfo .subtitulo--descuento {
+    grid-area: sdescuento;
+  }
+
+  body main .novedades {
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: overline;
+    font-family: 'Heycomic';
+  }
+
+  body main .mangas {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  body main .mangas .card--jujutsu .card-body {
+    height: 100px;
+  }
+
+  body main .mangas .card--promised .card-body {
+    height: 100px;
+  }
+
+  body main .mangas .card--haikyu .card-body {
+    height: 100px;
+  }
+
+  body main .mangas .card--tokyog .card-body {
+    height: 100px;
+  }
+
+  body main .mangas .card--tokyo .card-body {
+    height: 100px;
+  }
+
+  body main .mangas .card--slam .card-body {
+    height: 100px;
+  }
+
+  .body--sesion {
+    width: 320px;
+  }
+
+  .body--sesion .main--sesion {
+    width: 318px;
+    height: 400px;
+  }
+
+  .body--sesion .main--sesion .contenedor--sesion {
+    width: 317px;
+    height: 300px;
+    margin-left: 2px;
+    margin-top: 10px;
+  }
+
+  .body--sesion .main--sesion .contenedor--sesion .btn {
+    margin-left: 30%;
+  }
+
+  .body--compra {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .body--compra .main--compra {
+    width: 320px;
+    height: 2900px;
+  }
+
+  .body--compra .main--compra .contenedor--compra {
+    width: 320px;
+  }
+
+  .body--compra .main--compra .contenedor--compra .uno {
+    width: 320px;
+  }
+
+  .body--compra .main--compra .contenedor--compra .dos {
+    width: 320px;
+    margin-left: 10px;
+  }
+
+  .body--compra .main--compra .contenedor--compra .dos .nombre--manga {
+    margin-left: 18%;
+  }
+
+  .body--compra .main--compra .contenedor--compra .dos .nombre--manga1 {
+    margin-left: 27%;
+  }
+
+  .body--compra .main--compra .contenedor--compra .dos .nombre--manga2 {
+    margin-left: 13%;
+  }
+
+  .body--compra .main--compra .contenedor--compra .dos .nombre--manga3 {
+    margin-left: 10%;
+  }
+
+  .body--compra .main--compra .contenedor--compra .dos .nombre--manga4 {
+    margin-left: 22%;
+  }
+
+  .body--compra .main--compra .contenedor--compra .dos .precio {
+    margin-left: 40%;
+  }
+
+  .body--compra .main--compra .contenedor--compra .dos .acomodar {
+    width: 290px;
+  }
+
+  .body--compra .main--compra .contenedor--compra .tres {
+    width: 320px;
+  }
+
+  .body--compra .main--compra .contenedor--compra .tres .prueba {
+    text-align: center;
+  }
+
+  .body--compra .main--compra .contenedor--compra .tres .mangasD {
+    height: 1126px;
+  }
+
+  .body--compra .main--compra .contenedor--compra .tres .mangasD .mangas {
+    margin-left: 70px;
+  }
+
+  .body--compra .main--compra .contenedor--compra .jujutsu--compra {
+    width: 300px;
+    height: 350px;
+    margin-left: 10px;
+  }
+
+  .body--compra .main--compra .contenedor--compra .portada--compra {
+    width: 300px;
+    height: 350px;
+    margin-left: 10px;
+  }
+
+  footer {
+    background-color: #D37A47;
+  }
+
+  footer .contenedorFooter {
+    display: flex;
+    align-content: center;
+    width: 319px;
+    justify-content: space-between;
+  }
+
+  footer .contenedorFooter .fb {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+  }
+
+  footer .contenedorFooter .fb .red--social {
+    text-decoration: none;
+    color: black;
+  }
+
+  footer .contenedorFooter .ig {
+    width: 50px;
+    height: 50px;
+  }
+
+  footer .contenedorFooter .ig .red--social {
+    text-decoration: none;
+    color: black;
+  }
+
+  footer .contenedorFooter .tw {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  footer .contenedorFooter .tw .red--social {
+    text-decoration: none;
+    color: black;
+  }
+}
